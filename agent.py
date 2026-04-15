@@ -1,5 +1,6 @@
 import json
 import os
+from pathlib import Path
 
 from dotenv import load_dotenv
 from langchain.agents import create_agent
@@ -14,7 +15,7 @@ from .prompts import SYSTEM_PROMPT
 from .tools import TOOLS
 
 
-load_dotenv()
+load_dotenv(dotenv_path=Path(__file__).with_name(".env"))
 
 
 def _has_provider_credentials(provider: str) -> bool:
