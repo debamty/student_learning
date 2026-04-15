@@ -1,6 +1,6 @@
 import json
 
-from . import run_student_learning_agent
+from . import run_student_learningpath_langchain_agent
 from .sample_data import SAMPLE_STUDENTS
 
 
@@ -34,7 +34,7 @@ def main() -> None:
     reports = []
 
     for student in SAMPLE_STUDENTS:
-        result = run_student_learning_agent(student)
+        result = run_student_learningpath_langchain_agent(student)
         reports.append(_build_structured_report(student, result))
 
     print(json.dumps({"students": reports}, indent=2))

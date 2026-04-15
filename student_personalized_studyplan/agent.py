@@ -101,7 +101,7 @@ def create_student_agent():
     )
 
 
-def run_student_learning_agent(student_data: dict) -> dict:
+def run_student_learningpath_langchain_agent(student_data: dict) -> dict:
     provider = os.getenv("LLM_PROVIDER", "openai").strip().lower()
     if not _has_provider_credentials(provider):
         return _build_local_fallback_response(student_data)

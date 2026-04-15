@@ -18,24 +18,24 @@ The LangChain agent orchestrates those tools and returns a student-friendly resp
 
 ## Project files
 
-- `student_learning/models.py`: Pydantic schema for student data
-- `student_learning/analysis.py`: marks analysis logic
-- `student_learning/learning_path.py`: study path generation logic
-- `student_learning/tools.py`: LangChain tool wrappers
-- `student_learning/agent.py`: LLM and agent wiring
-- `student_learning/student_learning.py`: readable startup module
-- `student_learning/__main__.py`: package entrypoint for `python -m student_learning`
-- `student_learning/sample_data.py`: example student payload
-- `student_learning/requirements.txt`: Python dependencies
-- `student_learning/.env.example`: environment variables template
+- `student_learningpath_langchain/models.py`: Pydantic schema for student data
+- `student_learningpath_langchain/analysis.py`: marks analysis logic
+- `student_learningpath_langchain/learning_path.py`: study path generation logic
+- `student_learningpath_langchain/tools.py`: LangChain tool wrappers
+- `student_learningpath_langchain/agent.py`: LLM and agent wiring
+- `student_learningpath_langchain/student_learningpath_langchain.py`: readable startup module
+- `student_learningpath_langchain/__main__.py`: package entrypoint for `python -m student_learningpath_langchain`
+- `student_learningpath_langchain/sample_data.py`: example student payload
+- `student_learningpath_langchain/requirements.txt`: Python dependencies
+- `student_learningpath_langchain/.env.example`: environment variables template
 
 ## Setup
 
 ```bash
-pip install -r student_learning/requirements.txt
+pip install -r student_learningpath_langchain/requirements.txt
 ```
 
-Copy `student_learning/.env.example` to `student_learning/.env` and configure either OpenAI or Hugging Face.
+Copy `student_learningpath_langchain/.env.example` to `student_learningpath_langchain/.env` and configure either OpenAI or Hugging Face.
 
 ## Model provider options
 
@@ -57,12 +57,12 @@ HUGGINGFACE_TASK=text-generation
 HUGGINGFACE_MAX_NEW_TOKENS=512
 ```
 
-The orchestrator remains `student_learning/agent.py`; only the LLM backend changes.
+The orchestrator remains `student_learningpath_langchain/agent.py`; only the LLM backend changes.
 
 ## Run
 
 ```bash
-python -m student_learning
+python -m student_learningpath_langchain
 ```
 
 ## Notes on Hugging Face
