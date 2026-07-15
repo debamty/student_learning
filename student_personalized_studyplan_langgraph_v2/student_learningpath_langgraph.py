@@ -12,7 +12,10 @@ def _build_structured_report(student_data: dict, graph_output: dict) -> dict:
         "final_report": graph_output.get("final_report", ""),
         "analysis_json": graph_output.get("analysis_json", ""),
         "learning_path_json": graph_output.get("learning_path_json", ""),
-        "review_json": graph_output.get("review_json", ""),
+        "planner_json": graph_output.get("planner_json", ""),
+        "executor_json": graph_output.get("executor_json", ""),
+        "critic_json": graph_output.get("critic_json", ""),
+        "revision_count": graph_output.get("revision_count", 0),
     }
 
 

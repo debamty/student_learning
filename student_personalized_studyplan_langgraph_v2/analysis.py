@@ -23,6 +23,6 @@ def build_marks_analysis(student: StudentProfile) -> Dict[str, object]:
             }
             for subject, score in sorted_subjects
         ],
-        "top_strengths": [subject for subject, score in sorted_subjects[::-1][:2]],
+        "top_strengths": [subject for subject, score in sorted_subjects[::-1] if score >= 75][:2],
         "priority_subjects": [subject for subject, score in sorted_subjects if score < 60][:3],
     }
